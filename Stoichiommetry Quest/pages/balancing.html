@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balancing Chemical Equations</title>
+  <link rel="stylesheet" href="../css/balancing.css">
+</head>
+<body>
+  <!-- Back button top-left -->
+  <button class="back-button" id="bck-button" onclick="window.location.href='instructions.html'">← Back</button>
+
+  <div class="content fade-in">
+    <h1>Balancing Chemical Equations ⚗️</h1>
+
+    <!-- Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <p>Imagine you’re baking cookies. If the recipe says you need 2 cups of flour and 1 cup of sugar, you can’t just throw in random amounts — the ingredients have to match the recipe so the cookies turn out right. Chemical reactions work the same way. The “recipe” is called a chemical equation, and it shows which substances go in (reactants) and which ones come out (products).</p>
+     
+      <p>But here’s the rule: atoms are never created or destroyed in a reaction. They’re just rearranged. That means the number of each type of atom on the left side of the equation must equal the number on the right side. If they don’t match, the equation is “unbalanced,” and we need to fix it.</p>
+     
+      <p>Balancing a chemical equation is like adjusting the recipe so everything lines up. We don’t change the actual substances — we only add numbers (called coefficients) in front of them to make sure the atom counts are equal. For example:</p>
+      
+        <p>Unbalanced: H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O</p>
+        <p>Balanced:2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O</p>
+      
+      <p>Now there are 4 hydrogen atoms and 2 oxygen atoms on both sides. The “recipe” works, and the reaction makes sense.</p>
+      
+      <p>Balancing equations is the first step in solving chemistry problems because it tells us the correct proportions of substances involved. Once the equation is balanced, we can figure out how much of each chemical is needed or produced.</p> 
+    </section>
+
+    <!-- General Rules -->
+    <section>
+      <h2>General Rules for Balancing</h2>
+      <ul>
+        <li><strong>Step 1:</strong> Write the unbalanced equation.</li>
+        <li><strong>Step 2:</strong> Count atoms of each element on both sides.</li>
+        <li><strong>Step 3:</strong> Add coefficients to balance one element at a time.</li>
+        <li><strong>Step 4:</strong> Use the least common multiple for tricky cases.</li>
+        <li><strong>Step 5:</strong> Double‑check that all atoms are balanced.</li>
+      </ul>
+    </section>
+
+    <!-- Sample Problems -->
+    <section>
+      <h2>Sample Problems</h2>
+
+      <!-- Problem 1 -->
+      <div class="problem">
+        <p><strong>Problem 1:</strong> H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O</p>
+        <button class="toggle-btn" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div class="solution" id="sol1">
+          <ul>
+            <li>Left: H=2, O=2. Right: H=2, O=1.</li>
+            <li>Add 2 to H<sub>2</sub>O → H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O.</li>
+            <li>Now H=2 vs H=4. Add 2 to H<sub>2</sub> → 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O.</li>
+          </ul>
+          <p><strong>Answer:</strong> 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O</p>
+        </div>
+      </div>
+
+      <!-- Problem 2 -->
+      <div class="problem">
+        <p><strong>Problem 2:</strong> C<sub>3</sub>H<sub>8</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</p>
+        <button class="toggle-btn" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div class="solution" id="sol2">
+          <ul>
+            <li>Balance C: add 3 to CO<sub>2</sub>.</li>
+            <li>Balance H: add 4 to H<sub>2</sub>O.</li>
+            <li>Oxygen check: right side has 10 O atoms. Add 5 to O<sub>2</sub>.</li>
+          </ul>
+          <p><strong>Answer:</strong> C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> → 3CO<sub>2</sub> + 4H<sub>2</sub>O</p>
+        </div>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="problem">
+        <p><strong>Problem 3:</strong> Fe + O<sub>2</sub> → Fe<sub>2</sub>O<sub>3</sub></p>
+        <button class="toggle-btn" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div class="solution" id="sol3">
+          <ul>
+            <li>Balance Fe: add 2 to Fe.</li>
+            <li>Oxygen mismatch: LCM of 2 and 3 = 6.</li>
+            <li>Add 3 to O<sub>2</sub> and 2 to Fe<sub>2</sub>O<sub>3</sub>.</li>
+          </ul>
+          <p><strong>Answer:</strong> 4Fe + 3O<sub>2</sub> → 2Fe<sub>2</sub>O<sub>3</sub></p>
+        </div>
+      </div>
+
+      <!-- Problem 4 -->
+      <div class="problem">
+        <p><strong>Problem 4:</strong> Na + Cl<sub>2</sub> → NaCl</p>
+        <button class="toggle-btn" onclick="toggleSolution('sol4')">Show Solution</button>
+        <div class="solution" id="sol4">
+          <ul>
+            <li>Balance Cl: add 2 to NaCl.</li>
+            <li>Now Na=2 on right, so add 2 to Na on left.</li>
+          </ul>
+          <p><strong>Answer:</strong> 2Na + Cl<sub>2</sub> → 2NaCl</p>
+        </div>
+      </div>
+
+      <!-- Problem 5 -->
+      <div class="problem">
+        <p><strong>Problem 5:</strong> Al + O<sub>2</sub> → Al<sub>2</sub>O<sub>3</sub></p>
+        <button class="toggle-btn" onclick="toggleSolution('sol5')">Show Solution</button>
+        <div class="solution" id="sol5">
+          <ul>
+            <li>Balance Al: add 2 to Al.</li>
+            <li>Oxygen mismatch: LCM of 2 and 3 = 6.</li>
+            <li>Add 3 to O<sub>2</sub> and 2 to Al<sub>2</sub>O<sub>3</sub>.</li>
+          </ul>
+          <p><strong>Answer:</strong> 4Al + 3O<sub>2</sub> → 2Al<sub>2</sub>O<sub>3</sub></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<script src ="../js/script.js"></script>
+</body>
+</html>

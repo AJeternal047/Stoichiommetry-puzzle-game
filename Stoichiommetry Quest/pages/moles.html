@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculating Moles</title>
+  <link rel="stylesheet" href="../css/moles.css">
+</head>
+<body>
+  <!-- Back button -->
+     <button class="back-button" onclick="window.location.href='instructions.html'">← Back</button>
+    <div class="content fade-in">
+    <h1>Calculating Moles 🧪</h1>
+
+    <!-- Introduction -->
+    <section class="intro">
+      <h2>Introduction</h2>
+      <p>In chemistry, the mole is like a “counting unit” for atoms and molecules. Just as a dozen means 12 items, a mole means 6.022 × 10<sup>23</sup> particles. Because atoms are so tiny, chemists use moles to measure amounts of substances in a practical way.</p>
+      <p>Calculating moles helps us connect the mass of a substance we can measure in the lab to the number of particles involved in a reaction.</p>
+    </section>
+
+    <!-- General Rules -->
+    <section>
+      <h2>General Rules for Solving</h2>
+      <ul>
+        <li><strong>Step 1:</strong> Write down the given mass or number of particles.</li>
+        <li><strong>Step 2:</strong> Use the mole formula to convert.</li>
+        <li><strong>Step 3:</strong> Substitute values and solve.</li>
+        <li><strong>Step 4:</strong> Check units and make sure the answer makes sense.</li>
+      </ul>
+    </section>
+
+    <!-- Formula -->
+    <section>
+      <h2>The Mole Formula</h2>
+      <p><strong>n = m / M</strong></p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>n</strong> = number of moles</li>
+        <li><strong>m</strong> = mass of substance (grams)</li>
+        <li><strong>M</strong> = molar mass (g/mol)</li>
+      </ul>
+    </section>
+
+    <!-- Sample Problems -->
+    <section>
+      <h2>Sample Word Problems</h2>
+
+      <!-- Problem 1 -->
+      <div class="problem">
+        <p><strong>Problem 1:</strong> How many moles are in 18 g of water (H<sub>2</sub>O)?</p>
+        <button class="toggle-btn" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div class="solution" id="sol1">
+          <ul>
+            <li>Molar mass of H<sub>2</sub>O = (2×1) + (16) = 18 g/mol</li>
+            <li>n = m / M = 18 g ÷ 18 g/mol = 1 mol</li>
+          </ul>
+          <p><strong>Answer:</strong> 1 mole of water</p>
+        </div>
+      </div>
+
+      <!-- Problem 2 -->
+      <div class="problem">
+        <p><strong>Problem 2:</strong> How many moles are in 44 g of CO<sub>2</sub>?</p>
+        <button class="toggle-btn" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div class="solution" id="sol2">
+          <ul>
+            <li>Molar mass of CO<sub>2</sub> = (12) + (2×16) = 44 g/mol</li>
+            <li>n = m / M = 44 g ÷ 44 g/mol = 1 mol</li>
+          </ul>
+          <p><strong>Answer:</strong> 1 mole of carbon dioxide</p>
+        </div>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="problem">
+        <p><strong>Problem 3:</strong> How many moles are in 10 g of NaOH?</p>
+        <button class="toggle-btn" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div class="solution" id="sol3">
+          <ul>
+            <li>Molar mass of NaOH = (23) + (16) + (1) = 40 g/mol</li>
+            <li>n = m / M = 10 g ÷ 40 g/mol = 0.25 mol</li>
+          </ul>
+          <p><strong>Answer:</strong> 0.25 mole of sodium hydroxide</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function toggleSolution(id) {
+      const sol = document.getElementById(id);
+      if (sol.style.display === "none" || sol.style.display === "") {
+        sol.style.display = "block";
+      } else {
+        sol.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
